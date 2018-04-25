@@ -1,10 +1,18 @@
 import unittest
 
-def fun(x):
-    return x + 2
+def is_happy_number(x):
+    if x == 1:
+        return True
+    
     
 class MyTest(unittest.TestCase):
-    def test(self):
-        self.assertEqual(fun(3),4)
+    def test_happy_number_function(self):
+        self.assertTrue(is_happy_number(1))
+        self.assertTrue(is_happy_number(7))
+        self.assertTrue(is_happy_number(1000))
+        self.assertFalse(is_happy_number(4))
+        self.assertFalse(is_happy_number(0))
+        self.assertFalse(is_happy_number(-1))
 
-MyTest.test()
+if __name__ == '__main__':
+    unittest.main()
