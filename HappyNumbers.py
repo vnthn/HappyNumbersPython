@@ -11,8 +11,7 @@ def is_happy_number(x):
     y = sum_of_square_of_digits_of(x)
     if y == 1:
         return True
-    else:
-        is_happy_number(y)
+    return is_happy_number(y)
 class MyTest(unittest.TestCase):
     def test_happy_number_function(self):
         self.assertTrue(is_happy_number(1))
